@@ -1,0 +1,25 @@
+*** This program requires OpenGL (glut) to be installed on the machine ***
+Check if you can do this: "#include <GL/glut.h>"
+
+
+What I did for this assignment is mandelbrot set using OpenGL. It has zoom in and zoom out function. You can zoom in by pressing left mouse button where you want to zoom in. And to zoom out you can just press right button (only 1 press for both command).
+
+Important function to look at:
+- main(): main GLUT loop to draw and receive input.
+- displayMandelbrot(): calculate how to draw each pixel and draw it.
+- recalculateRange(): calculate range of min and max real and imagine number after zoom in/out
+- getIterMandelbrot(): only calculate the number of iteration it takes for each complex number
+
+In config.h file is some number can be tweaked to change the performance of the program. I made the program run with multiple threads (32 threads to be exact and that can be changed in config.h). If you don't want multithreading, just change multiThread to false.
+
+If you want even quicker result (but less accurate), you can change iteration to a smaller number. Or change the width and height to a smaller number. But if you change width and height please make sure to change it so that the ratio is 4:3
+
+Control is really simple:
+- Zoom in:
+  + Zoom in quickly at cursor: left click
+  + Zoom in slowly at center: scroll up or 'i' for anyone who doesn't have a mouse
+- Zoom out:
+  + Zoom out quickly at center: right click
+  + Zoom out slowly at center: scroll down or 'k' for anyone who doesn't have a mouse
+- Movement:
+  + Moving up, down, left, right: W,S,A,D respectively
