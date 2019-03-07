@@ -1,7 +1,7 @@
 *** This program requires OpenGL (glut) to be installed on the machine ***
 Check if you can do this: "#include <GL/glut.h>"
 
-Visualizing the beauty of Mandelbrot set
+This app can be use to visualize the beauty of Mandelbrot set
 
 In config.h file is some number can be tweaked to change the performance of the program. I made the program run with multiple threads (32 threads to be exact and that can be changed in config.h). If you don't want multithreading, just change multiThread to false.
 
